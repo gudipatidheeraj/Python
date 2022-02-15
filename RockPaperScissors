@@ -1,0 +1,23 @@
+import random
+userInput = input("Enter any of these: \n 1) rock \n 2) paper \n 3) scissors \n")
+print(f" User has choosen {userInput}")
+computerPossibleActions = ["rock","paper","scissors"]
+computer_action = random.choice(computerPossibleActions)
+print(f" Computer has choosen {computer_action}")
+if userInput == computer_action:
+    print("Game got tied! Play Again")
+elif userInput == "rock":
+    if computer_action == "paper":
+        print("Computer Win! Retry..")
+    else:
+        print("User Win! Congo..")
+elif userInput == "paper":
+    if computer_action == "rock":
+        print("User Win! Congo..")
+    else:
+        print("Computer Win! Retry..")
+elif userInput == "scissors":
+    if computer_action == "rock":
+        print("Computer Win! Retry..")
+    else:
+        print("User Win! Congo..")
